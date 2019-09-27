@@ -36,14 +36,12 @@ rem always have Linux line endings in text files
 git config --global core.autocrlf input
 
 rem see https://github.com/github/hub for more information on this git tool
-choco install hub
 choco install github-desktop
 choco install tortoisegit
-
-choco install dropbox
+choco install gitkraken
 choco install keepass
 
-choco install firefox flashplayerplugin
+choco install firefox
 choco pin add -n=firefox
 
 choco install googlechrome
@@ -53,8 +51,8 @@ choco install conemu clink
 rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
 rem clink set exec_match_style -1
 
-choco install autohotkey.install
-choco install classic-shell
+rem choco install autohotkey.install
+rem choco install classic-shell
 rem Needs to be installed after a reboot
 rem choco install QTTabBar
 
@@ -70,32 +68,32 @@ choco install jdk8 jre8
 choco install jetbrainstoolbox
 choco pin add -n=jetbrainstoolbox
 
-choco install skype
 choco install pdfcreator
 
-choco install lockhunter
-choco install windirstat
-choco install sysinternals
-choco install procexp
-choco install procmon
-choco install autoruns
+rem choco install lockhunter
+rem choco install windirstat
+rem choco install sysinternals
+rem choco install procexp
+rem choco install procmon
+rem choco install autoruns
 
 rem disabled, because it depends on powershell, which is provided by Windows itself
 rem choco install poshgit
 
 choco install strawberryperl python2 python3
 choco install ruby
+choco install miktex
 choco install texstudio
 choco install sumatrapdf.install
 choco install jabref
-choco isntall imagemagick
+rem choco isntall imagemagick
 
 choco install 7zip
 choco install nodejs-lts
 choco install jsonedit
-choco install fiddler4
+rem choco install fiddler4
 choco install winmerge
-choco install ack
+rem choco install ack
 
 choco install f.lux
 choco pin add -n=f.lux
@@ -103,7 +101,7 @@ choco install teamviewer
 choco install vlc
 
 rem enable editing the Outlook auto completion
-choco install nk2edit.install
+rem choco install nk2edit.install
 
 rem interactive
 rem choco install windowsessentials
@@ -115,28 +113,7 @@ rem This allows to burn ISOs - see https://rufus.akeo.ie/
 choco install rufus
 
 rem requires restart
-choco install adobereader
-
-goto END
-
-rem These packages require manual intervention
-choco install veracrypt
-
-rem koppor's special tools
-
-choco install foobar2000 opencodecs
-choco install honeyview
-
-rem koppor's very special tools
-choco install pandoc
-choco install xmlstarlet
-choco install jq
-choco install synctrayzor
-choco pin add -n=synctrayzor
-
-rem Manually: msys2
-
-:END
+rem choco install adobereader
 
 echo To keep your system updated, run update-all.bat regularly from an administrator CMD.exe.
 echo .
