@@ -19,7 +19,7 @@ echo Now chocolatey should be ready and we can go ahead
 echo .
 pause
 
-choco install git.install -y --params "/GitAndUnixToolsOnPath /NoAutoCrlf /WindowsTerminal"
+choco install git.install -y --params
 call refreshenv
 rem performance tweaks
 git config --global core.commitGraph true
@@ -47,18 +47,10 @@ choco pin add -n=firefox
 choco install googlechrome
 choco pin add -n=googlechrome
 
-choco install conemu clink
-rem enable normal files also to be treated as executable - see https://github.com/mridgers/clink/issues/311#issuecomment-95330570
-rem clink set exec_match_style -1
-
-rem choco install autohotkey.install
-rem choco install classic-shell
-rem Needs to be installed after a reboot
-rem choco install QTTabBar
+choco install QTTabBar
 
 choco install notepadplusplus
 choco install vscode
-choco pin add -n vscode
 
 choco install putty.install
 choco install winscp.install
@@ -70,50 +62,26 @@ choco pin add -n=jetbrainstoolbox
 
 choco install pdfcreator
 
-rem choco install lockhunter
-rem choco install windirstat
-rem choco install sysinternals
-rem choco install procexp
-rem choco install procmon
-rem choco install autoruns
+rchoco install windirstat
+choco install procexp
+choco install procmon
 
-rem disabled, because it depends on powershell, which is provided by Windows itself
-rem choco install poshgit
+choco install strawberryperl python2 
+choco install python3 --version=3.7.3
+choco pin add -n=python3
 
-choco install strawberryperl python2 python3
 choco install ruby
 choco install miktex
 choco install texstudio
-choco install sumatrapdf.install
 choco install jabref
-rem choco isntall imagemagick
 
 choco install 7zip
 choco install nodejs-lts
 choco install jsonedit
-rem choco install fiddler4
 choco install winmerge
-rem choco install ack
-
-choco install f.lux
-choco pin add -n=f.lux
-choco install teamviewer
-choco install vlc
-
-rem enable editing the Outlook auto completion
-rem choco install nk2edit.install
-
-rem interactive
-rem choco install windowsessentials
 
 choco install docker-for-windows 
 choco pin add -n=docker-for-windows 
-
-rem This allows to burn ISOs - see https://rufus.akeo.ie/
-choco install rufus
-
-rem requires restart
-rem choco install adobereader
 
 echo To keep your system updated, run update-all.bat regularly from an administrator CMD.exe.
 echo .
