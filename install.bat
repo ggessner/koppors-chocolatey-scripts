@@ -19,7 +19,7 @@ echo Now chocolatey should be ready and we can go ahead
 echo .
 pause
 
-choco install git.install -y --params
+choco install git.install -y
 call refreshenv
 rem performance tweaks
 git config --global core.commitGraph true
